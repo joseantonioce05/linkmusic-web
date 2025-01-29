@@ -1,0 +1,27 @@
+.artist-detail-container {
+  padding-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.artist-detail-container img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.artist-detail-container h1 {
+  color: #EFD6AC;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.artist-detail-container hr {
+  margin-top: 2rem;
+  color: #EFD6AC;
+}
+
+.artist-detail-container .artist-name {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}

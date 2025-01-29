@@ -1,0 +1,58 @@
+.album-detail-container {
+  padding-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.album-detail-container img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.album-detail-container h1 {
+  color: #EFD6AC;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.album-detail-container hr {
+  margin-top: 0.5rem;
+  color: #EFD6AC;
+}
+
+.album-detail-container .album-name {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.description {
+  color: #EFD6AC;
+  font-weight: bold;
+  padding-top: 0.5rem;
+}
+
+.numeral  {
+  text-align: center;
+}
+
+.duration {
+  text-align: center;
+}
+
+.song {
+  padding-top: 0.5rem;
+}
+
+.song p {
+  color: #EFD6AC;
+  font-weight: bold;
+}
+
+.song-track {
+  text-align: center;
+}
+
+.song-duration {
+  text-align: center;
+}

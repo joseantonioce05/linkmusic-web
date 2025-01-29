@@ -1,0 +1,9 @@
+.navbar-container {
+  padding: 0;
+  background-color: #183A37;
+  width: 100% !important;
+  height: 2rem;
+  color: #EFD6AC;
+  font-weight: bold;
+  padding: 0.2rem;
+}

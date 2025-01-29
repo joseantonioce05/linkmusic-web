@@ -1,0 +1,29 @@
+.artist-list-container {
+  margin-left: 2rem;
+}
+
+.artist-list-container h2 {
+  color: #EFD6AC;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.artist-list {
+  display: flex;
+  margin-top: 0.25rem;
+}
+
+.artist-list .artist-container {
+  margin-right: 2rem;
+}
+
+.artist-list .artist-container p {
+  color: #EFD6AC;
+  margin-top: 0.25rem;
+  font-weight: bold;
+}
+
+.artist-list .artist-container img {
+  width: 12rem;
+  height: 12rem;
+}
