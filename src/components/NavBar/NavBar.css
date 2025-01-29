@@ -2,8 +2,30 @@
   padding: 0;
   background-color: #183A37;
   width: 100% !important;
-  height: 2rem;
+  height: 2.5rem;
   color: #EFD6AC;
   font-weight: bold;
   padding: 0.2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.navbar-home {
+  align-self: center;
+}
+
+.navbar-libray {
+  align-self: center;
+}
+
+.navbar-title {
+  text-align: center;
+  align-self: center;
+  font-size: 1.4rem;
+}
+
+.navbar-user {
+  text-align: right;
+  align-self: center;
+  justify-content: right;
 }

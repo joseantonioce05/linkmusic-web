@@ -10,9 +10,7 @@ const Login = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      console.log(data)
       const response = await new UsersService().login(data);
-      console.log(response)
       localStorage.setItem("userToken", response.data.token);
       localStorage.setItem("idUser", response.data.user._id);
       navigate("/");
