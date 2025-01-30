@@ -32,7 +32,7 @@ const ArtistDetail = () => {
 
     <div className="artist-detail-container">
       {artist && 
-        <div key={artist._id} className="grid lg:grid-cols-7 md:grid-cols-3 sm:grid-cols-2 max-sm:grid-cols-2">
+        <div key={artist._id} className="artist-details grid lg:grid-cols-7 md:grid-cols-3 sm:grid-cols-2 max-sm:grid-cols-2">
           <div className="artist-image">
             <img src={imageDefault} alt="" />
           </div>
@@ -42,6 +42,7 @@ const ArtistDetail = () => {
         </div>
       }
       <hr />
+      <p className="album-p">Albums:</p>
       {artist && 
         <AlbumList artistId={artist._id}/>
       }      

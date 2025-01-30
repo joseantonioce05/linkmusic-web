@@ -1,5 +1,9 @@
 .artist-detail-container {
   padding-top: 2rem;
+  
+}
+
+.artist-details {
   padding-left: 4rem;
   padding-right: 4rem;
 }
@@ -17,6 +21,8 @@
 
 .artist-detail-container hr {
   margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: #EFD6AC;
 }
 
@@ -24,4 +30,11 @@
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.album-p {
+  color: #EFD6AC;
+  font-weight: bold;
+  padding-top: 0.4rem;
+  padding-left: 2rem;
 }

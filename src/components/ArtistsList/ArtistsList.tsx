@@ -3,7 +3,7 @@ import ArtistsService from "../../services/ArtistsService";
 import Artist from "../../models/Artist";
 import { Link } from "react-router-dom";
 import './ArtistsList.css'
-import imageDefault from '../../assets/default.png'
+import imageDefault from '../../../../uploads/artists/default.png'
 
 const ArtistsList = () => {
 
@@ -25,7 +25,7 @@ const ArtistsList = () => {
 
   return <div className="artist-list-container">
       <h2>Ultimos artista</h2>
-      <div className="artist-list grid grid-cols-6">
+      <div className="artist-list grid max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 max-2xl:grid-cols-6 2xl:grid-cols-7">
       
       {artists.map(artist => (           
           <div key={artist._id} className="artist-container">
