@@ -19,7 +19,7 @@ const Login = () => {
     }
   };
 
-  return <div className="login-container flex-col">
+  return <div className="login-container flex-colum">
     <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
       <h2>Link Music</h2>
       <h3>Inicia sesion al ritmo de la musica</h3>

@@ -3,7 +3,6 @@ import Album from "../../models/Album";
 import AlbumService from "../../services/AlbumService";
 import './AlbumList.css'
 import { Link } from "react-router-dom";
-import imageDefault from "../../assets/default.png"
 
 type Props = {
   artistId: string;
@@ -31,7 +30,7 @@ const AlbumList = ({ artistId }: Props) => {
       <div className="grid">
         <div className="album-image">
           <Link to={`/album/${album._id}`}>
-            <img src={imageDefault} alt="" />
+            <img src={import.meta.env.VITE_API_URL + "album/image/" + album.image} alt="" />
           </Link>
         </div>
         <div>

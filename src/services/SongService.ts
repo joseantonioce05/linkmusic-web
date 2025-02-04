@@ -23,6 +23,15 @@ export default class SongsService {
     })
   }
 
+  getAllSong() {
+    return axios.get(`${this.baseUrl}/all/`, {
+      headers: {
+        Authorization: localStorage.getItem("userToken"),
+        "ngrok-skip-browser-warning": "69420",
+      },
+    });
+  }
+
   getAll(id: string) {
     return axios.get(`${this.baseUrl}/list/${id}`, {
       headers: {

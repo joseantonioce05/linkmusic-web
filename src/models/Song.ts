@@ -9,4 +9,6 @@ export default interface Song {
     artistId: number;
     createdAt: string;
     updatedAt: string;
+    image: string;
+    file: string;
 }

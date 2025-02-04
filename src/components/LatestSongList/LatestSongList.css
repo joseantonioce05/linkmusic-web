@@ -1,0 +1,29 @@
+.song-list-container {
+  margin-left: 2rem;
+}
+
+.song-list-container h2 {
+  color: #EFD6AC;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.song-list {
+
+  margin-top: 0.25rem;
+}
+
+.song-list .song-container {
+  margin-right: 2rem;
+}
+
+.song-list .song-container p {
+  color: #EFD6AC;
+  margin-top: 0.25rem;
+  font-weight: bold;
+}
+
+.song-list .song-container img {
+  width: 12rem;
+  height: 12rem;
+}

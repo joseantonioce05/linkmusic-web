@@ -3,8 +3,10 @@ import Song from "../../models/Song";
 import SongsService from "../../services/SongService";
 import Album from "../../models/Album";
 import AlbumService from "../../services/AlbumService";
-import './SongList.css'
-import imageDefault from '../../assets/default.png'
+import './AlbumSongList.css'
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { Button } from "@mui/material";
+
 
 type Props = {
   albumId: string;
@@ -18,11 +20,9 @@ const SongList = ({ albumId }: Props) => {
   const fetchData = async () => {
       try {
         const responseSong = await new SongsService().getAll(albumId)
-        console.log(responseSong)
         setSongs(responseSong.data.song);
 
         const responseAlbum = await new AlbumService().getAlbum(albumId)
-        console.log(responseAlbum)
         setAlbum(responseAlbum.data.albumSearched);
 
       } catch (error) {
@@ -38,7 +38,7 @@ const SongList = ({ albumId }: Props) => {
     {album && 
     <div key={album._id} className="grid lg:grid-cols-7 md:grid-cols-3 sm:grid-cols-2 max-sm:grid-cols-2">
     <div className="album-image">
-      <img src={imageDefault} alt="" />
+      <img src={import.meta.env.VITE_API_URL + "album/image/" + album.image} alt="" />
     </div>
     <div className="album-name">
       <h1>{album.title}</h1>
@@ -68,6 +68,12 @@ const SongList = ({ albumId }: Props) => {
         </div>
         <div className="song-duration">
           <p> {song.duration}</p>
+        </div>
+        <div className="song-play">
+          <Button onClick={() => {
+            localStorage.setItem("song", song.file)
+            console.log(localStorage.getItem("song"))
+          }}><PlayArrowIcon /></Button>
         </div>
       </div>
     ))}

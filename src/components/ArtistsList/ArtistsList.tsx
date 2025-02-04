@@ -3,7 +3,6 @@ import ArtistsService from "../../services/ArtistsService";
 import Artist from "../../models/Artist";
 import { Link } from "react-router-dom";
 import './ArtistsList.css'
-import imageDefault from '../../../../uploads/artists/default.png'
 
 const ArtistsList = () => {
 
@@ -30,7 +29,7 @@ const ArtistsList = () => {
       {artists.map(artist => (           
           <div key={artist._id} className="artist-container">
             <Link to={`/artist/${artist._id}`}>
-              <img src={imageDefault} alt="" />
+              <img src={import.meta.env.VITE_API_URL + "artist/image/" + artist.image} alt="" />
             </Link>
             <p >{artist.name}</p>
           </div>
