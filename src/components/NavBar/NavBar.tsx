@@ -44,7 +44,14 @@ const NavBar  = () => {
         </div>
         { (user.role === 'admin') ? <div className='navbar-user-menu-items'><p>Adminstrador</p></div> : <></>}
         <div className='navbar-user-menu-items'>
-          <p>Cerrar sesion</p>
+          <button onClick={() => {
+            localStorage.removeItem('userToken')
+            localStorage.removeItem('song')
+            localStorage.removeItem('idUser')
+            localStorage.removeItem('userRole')
+
+            window.location.reload()
+          }}>Cerrar sesion</button>
         </div>
       </div>}
   </div>

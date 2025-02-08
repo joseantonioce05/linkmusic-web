@@ -5,6 +5,7 @@ import ArtistsService from "../services/ArtistsService";
 import AlbumList from "../components/AlbumList/AlbumList";
 import NavBar from "../components/NavBar/NavBar";
 import './ArtistDetails.css'
+import MessageLogin from "../components/MessageLogin/MessageLogin";
 
 const ArtistDetail = () => {
 
@@ -25,6 +26,8 @@ const ArtistDetail = () => {
   }, [])
   
   return <div className="container-home"> 
+    { (localStorage.getItem("userToken") === null ? <MessageLogin/> : <></>) }
+
     <NavBar>
       
     </NavBar> 

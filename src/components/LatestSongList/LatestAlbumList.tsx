@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import "./LatestSongList.css";
+import "./LatestAlbumList.css";
 import Album from "../../models/Album";
 import AlbumService from "../../services/AlbumService";
+import { Link } from "react-router-dom";
 
-const LatestSongList = () => {
+const LatestAlbumList = () => {
   const [albums, setAlbums] = useState<Album[]>([]);
 
   const fetchData = async () => {
@@ -27,10 +28,12 @@ const LatestSongList = () => {
       <div className="song-list grid max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 max-2xl:grid-cols-6 2xl:grid-cols-7">
         {albums.map((album) => (
           <div key={album._id} className="song-container">
-            <img
-              src={import.meta.env.VITE_API_URL + "album/image/" + album.image}
-              alt=""
-            />
+            <Link to={`/album/${album._id}`}>
+              <img
+                src={import.meta.env.VITE_API_URL + "album/image/" + album.image}
+                alt=""
+              />
+            </Link>
             <p>{album.title}</p>
           </div>
         ))}
@@ -39,4 +42,4 @@ const LatestSongList = () => {
   );
 };
 
-export default LatestSongList;
+export default LatestAlbumList;
