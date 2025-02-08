@@ -5,8 +5,8 @@
   height: 2.5rem;
   color: #EFD6AC;
   font-weight: bold;
-  padding: 0.2rem;
-  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   padding-left: 1rem;
 }
 
@@ -28,4 +28,15 @@
   text-align: right;
   align-self: center;
   justify-content: right;
+  padding-right: 0.3rem;
+}
+
+.navbar-user-menu {
+  text-align: right;
+  background-color: #183A37;
+  padding-right: 0.4rem;
+}
+
+.navbar-user-menu-items {
+  padding-top: 0.1rem;
 }

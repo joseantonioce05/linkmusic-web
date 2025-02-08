@@ -5,8 +5,7 @@ import Album from "../../models/Album";
 import AlbumService from "../../services/AlbumService";
 import './AlbumSongList.css'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { Button } from "@mui/material";
-
+import { useSong } from "../../context/SongContext";
 
 type Props = {
   albumId: string;
@@ -16,6 +15,8 @@ const SongList = ({ albumId }: Props) => {
 
   const [songs, setSongs] = useState<Song[]>([]);
   const [album, setAlbum] = useState<Album| null>(null);
+
+  const { setSong } = useSong();
 
   const fetchData = async () => {
       try {
@@ -70,10 +71,7 @@ const SongList = ({ albumId }: Props) => {
           <p> {song.duration}</p>
         </div>
         <div className="song-play">
-          <Button onClick={() => {
-            localStorage.setItem("song", song.file)
-            console.log(localStorage.getItem("song"))
-          }}><PlayArrowIcon /></Button>
+          <button onClick={() => setSong(song.file)}><PlayArrowIcon /></button>
         </div>
       </div>
     ))}

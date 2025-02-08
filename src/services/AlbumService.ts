@@ -21,6 +21,14 @@ export default class AlbumService {
         })
     }
 
+    getAllAlbums(){
+        return axios.get(`${this.baseUrl}/listAll/`, {
+            headers: { Authorization: localStorage.getItem('userToken'),
+                "ngrok-skip-browser-warning": "69420",             
+            }
+        })
+    }
+
     getImageAlbum(imageId: string){
         return axios.get(`${this.baseUrl}/image/${imageId}`, {
             headers: { Authorization: localStorage.getItem('userToken'),

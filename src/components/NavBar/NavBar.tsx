@@ -8,7 +8,7 @@ import UsersService from '../../services/UserService';
 
 const NavBar  = () => {
   const [user, setUser] = useState<User | null>(null);
-
+  const [isOpen, setIsOpen] = useState(false)
   const fetchData = async () => {
       try {
           const response = await new UsersService().userInfo(localStorage.getItem('idUser')!)
@@ -32,11 +32,21 @@ const NavBar  = () => {
     <div className='navbar-title max-lg:invisible max-lg:row-start-2 lg:visible lg:col-start-5 lg:col-span-2 xl:col-start-6 2xl:col-start-6 2xl:col-span-1'>
       <p>Link Music</p>
     </div>
-    <div className='navbar-user flex lg:col-start-12'>
+    <button onClick={() => setIsOpen((prev) => !prev)} className='navbar-user flex lg:col-start-12'>
       {user &&
         <p>{user.username}</p>
       }<PersonIcon/>
-    </div>
+    </button>
+
+    {isOpen && user && <div className='navbar-user-menu lg:col-start-12 '>
+        <div className='navbar-user-menu-items'>
+          <p>Perfil</p>
+        </div>
+        { (user.role === 'admin') ? <div className='navbar-user-menu-items'><p>Adminstrador</p></div> : <></>}
+        <div className='navbar-user-menu-items'>
+          <p>Cerrar sesion</p>
+        </div>
+      </div>}
   </div>
 }
 

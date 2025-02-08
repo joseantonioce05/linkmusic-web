@@ -1,11 +1,12 @@
 import ReactAudioPlayer from "react-audio-player";
-import defaultMusic2 from "../../../../api-linkmusic/uploads/songs/song-1735859061857-1.01 Full Moon Full Life.mp3"
+import { useSong } from "../../context/SongContext";
 
 const MusicPlayer = () => {
+  const {song} = useSong();
 
   return <div>
     <ReactAudioPlayer
-    src={defaultMusic2}
+    src={import.meta.env.VITE_API_URL + "song/audio/" + song}
     controls/>
   </div>
 }

@@ -13,6 +13,8 @@ const Login = () => {
       const response = await new UsersService().login(data);
       localStorage.setItem("userToken", response.data.token);
       localStorage.setItem("idUser", response.data.user._id);
+      localStorage.setItem("userRole", response.data.user.role);
+      console.log(response.data)
       navigate("/");
     } catch (error) {
       console.log(error);
