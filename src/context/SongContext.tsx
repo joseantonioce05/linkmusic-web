@@ -9,10 +9,16 @@ const SongContext = createContext<SongContextType | undefined>(undefined);
 
 export const SongProvider = ({ children }: { children: ReactNode }) => {
   const [song, setSong] = useState<string>("");
+  
+  if (song != "") {
+    localStorage.setItem('song', song)
+  }
+  
 
   return (
     <SongContext.Provider value={{ song, setSong }}>
       {children}
+      
     </SongContext.Provider>
   );
 };
