@@ -1,5 +1,8 @@
 .music-player-container {
   background-color: #183A37;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1rem;
 }
 
 .song-info {

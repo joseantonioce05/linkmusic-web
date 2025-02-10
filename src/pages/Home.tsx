@@ -4,6 +4,7 @@ import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 import { SongProvider } from "../context/SongContext";
 import MessageLogin from "../components/MessageLogin/MessageLogin";
 import LatestAlbumList from "../components/LatestSongList/LatestAlbumList";
+import './Home.css'
 
 const Home = () => {
   console.log(localStorage.getItem("userToken"))
@@ -16,8 +17,10 @@ const Home = () => {
     
     <SongProvider>
       <NavBar />
-      <ArtistsList />
-      <LatestAlbumList />
+      <div className="home-container">
+        <ArtistsList />
+        <LatestAlbumList />
+      </div>
       <MusicPlayer/>
     </SongProvider>
 

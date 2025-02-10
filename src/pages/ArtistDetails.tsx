@@ -34,7 +34,7 @@ const ArtistDetail = () => {
       
     </NavBar> 
 
-    <div className="artist-detail-container">
+    <div className="artist-detail-container overflow-auto">
       {artist && 
         <div key={artist._id} className="artist-details grid lg:grid-cols-7 md:grid-cols-3 sm:grid-cols-2 max-sm:grid-cols-2">
           <div className="artist-image">
