@@ -46,6 +46,7 @@ const MusicPlayer = () => {
         src={import.meta.env.VITE_API_URL + "song/audio/" + localStorage.getItem('song')}
         color="#EFD6AC"
         sliderColor="#EFD6AC"
+        autoPlay
         style={{ background: "#183A37",  }}
         className='music-player'
         />

@@ -5,7 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import User from '../../models/User';
 import { useEffect, useState } from 'react';
 import UsersService from '../../services/UserService';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const NavBar  = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -27,7 +27,10 @@ const NavBar  = () => {
   
   return <div className="navbar-container grid max-lg:grid-cols-3 lg:grid-cols-8 xl:grid-cols-12">
     <div className='navbar-home'>
-      <a href="/"><HouseIcon/> Inicio</a>
+      <Link to={"/"}>
+      <HouseIcon/> Inicio
+      </Link>
+      {/* <a href="/"><HouseIcon/> Inicio</a> */}
     </div>
     <div className='navbar-libray max-lg:justify-self-center max-lg:col-span-1 max-md:justify-self-center lg:col-span-2 xl:col-span-2 invisible'>
       <LibraryMusicIcon/> Bioblioteca

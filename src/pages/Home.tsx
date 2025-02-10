@@ -1,7 +1,4 @@
 import ArtistsList from "../components/ArtistsList/ArtistsList";
-import NavBar from "../components/NavBar/NavBar";
-import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
-import { SongProvider } from "../context/SongContext";
 import MessageLogin from "../components/MessageLogin/MessageLogin";
 import LatestAlbumList from "../components/LatestSongList/LatestAlbumList";
 import './Home.css'
@@ -15,14 +12,10 @@ const Home = () => {
   return <div className="container-home">
     { (localStorage.getItem("userToken") === null ? <MessageLogin/> : <></>) }
     
-    <SongProvider>
-      <NavBar />
-      <div className="home-container">
-        <ArtistsList />
-        <LatestAlbumList />
-      </div>
-      <MusicPlayer/>
-    </SongProvider>
+    <div className="home-container">
+      <ArtistsList />
+      <LatestAlbumList />
+    </div>
 
   </div>; 
 };

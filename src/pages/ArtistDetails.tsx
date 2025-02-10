@@ -3,11 +3,8 @@ import Artist from "../models/Artist";
 import { useParams } from "react-router-dom";
 import ArtistsService from "../services/ArtistsService";
 import AlbumList from "../components/AlbumList/AlbumList";
-import NavBar from "../components/NavBar/NavBar";
 import './ArtistDetails.css'
 import MessageLogin from "../components/MessageLogin/MessageLogin";
-import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
-import { SongProvider } from "../context/SongContext";
 
 const ArtistDetail = () => {
 
@@ -30,10 +27,6 @@ const ArtistDetail = () => {
   return <div className="container-home"> 
     { (localStorage.getItem("userToken") === null ? <MessageLogin/> : <></>) }
 
-    <NavBar>
-      
-    </NavBar> 
-
     <div className="artist-detail-container overflow-auto">
       {artist && 
         <div key={artist._id} className="artist-details grid lg:grid-cols-7 md:grid-cols-3 sm:grid-cols-2 max-sm:grid-cols-2">
@@ -51,9 +44,7 @@ const ArtistDetail = () => {
         <AlbumList artistId={artist._id}/>
       }      
     </div>
-    <SongProvider>
-      <MusicPlayer/>
-    </SongProvider>
+
   </div>; 
 }
 
