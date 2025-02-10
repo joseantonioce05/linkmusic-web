@@ -2,6 +2,19 @@
   background-color: #183A37;
 }
 
+.song-info {
+  color: #EFD6AC;
+}
+
+.song-info img {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+
+.song-details {
+  padding-left: 0.5rem;
+}
+
 .music-player {
   margin-left: auto;
   margin-right: auto;

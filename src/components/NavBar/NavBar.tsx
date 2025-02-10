@@ -29,7 +29,7 @@ const NavBar  = () => {
     <div className='navbar-home'>
       <a href="/"><HouseIcon/> Inicio</a>
     </div>
-    <div className='navbar-libray max-lg:justify-self-center max-lg:col-span-1 max-md:justify-self-center lg:col-span-2 xl:col-span-2'>
+    <div className='navbar-libray max-lg:justify-self-center max-lg:col-span-1 max-md:justify-self-center lg:col-span-2 xl:col-span-2 invisible'>
       <LibraryMusicIcon/> Bioblioteca
     </div>
     <div className='navbar-title max-lg:invisible max-lg:row-start-2 lg:visible lg:col-start-5 lg:col-span-2 xl:col-start-6 2xl:col-start-6 2xl:col-span-1'>
