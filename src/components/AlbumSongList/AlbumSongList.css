@@ -2,6 +2,8 @@
   padding-top: 2rem;
   padding-left: 4rem;
   padding-right: 4rem;
+  width: 100%;
+  height: 100%;
 }
 
 .album-detail-container img {
@@ -21,7 +23,7 @@
 }
 
 .album-detail-container .album-name {
-  text-align: center;
+  padding: 0.5rem;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -38,6 +40,10 @@
 
 .duration {
   text-align: center;
+}
+
+.artist-name{
+  text-align: center
 }
 
 .song {
