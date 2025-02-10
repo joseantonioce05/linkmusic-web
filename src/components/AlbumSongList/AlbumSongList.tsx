@@ -11,12 +11,12 @@ type Props = {
   albumId: string;
 };
 
-const SongList = ({ albumId }: Props) => {
+const AlbumSongList = ({ albumId }: Props) => {
 
   const [songs, setSongs] = useState<Song[]>([]);
   const [album, setAlbum] = useState<Album| null>(null);
 
-  const { setSong } = useSong();
+  const { setSongName } = useSong();
 
   const fetchData = async () => {
       try {
@@ -71,11 +71,11 @@ const SongList = ({ albumId }: Props) => {
           <p> {song.duration}</p>
         </div>
         <div className="song-play">
-          <button onClick={() => setSong(song.file)}><PlayArrowIcon /></button>
+          <button onClick={() => {setSongName(song.file); localStorage.setItem('albumId', album!._id); localStorage.setItem('songName', song.name)}}><PlayArrowIcon /></button>
         </div>
       </div>
     ))}
   </div>
 }
 
-export default SongList;
+export default AlbumSongList;

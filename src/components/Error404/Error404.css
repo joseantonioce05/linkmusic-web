@@ -1,0 +1,10 @@
+.message-container {
+  background-color: #183A37;
+  color: #EFD6AC;
+}
+
+.message-container button {
+  background-color: #04151F;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}

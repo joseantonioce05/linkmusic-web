@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar"
-import SongList from "../components/AlbumSongList/AlbumSongList";
+// import SongList from "../components/AlbumSongList/AlbumSongList";
 import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 import { SongProvider } from "../context/SongContext";
 import MessageLogin from "../components/MessageLogin/MessageLogin";
+import AlbumSongList from "../components/AlbumSongList/AlbumSongList";
 
 const AlbumDetails = () => {
   const params = useParams();
@@ -13,7 +14,7 @@ const AlbumDetails = () => {
       { (localStorage.getItem("userToken") === null ? <MessageLogin/> : <></>) }
       <div>
         <NavBar />
-        <SongList albumId={params.albumId!}/>
+        <AlbumSongList albumId={params.albumId!}/>
         <MusicPlayer />
       </div>
     </SongProvider>

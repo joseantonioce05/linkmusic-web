@@ -1,0 +1,13 @@
+.user-info-container {
+  color: #EFD6AC;
+  font-weight: bold;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  justify-content: center;
+}
+
+.user-username {
+  margin-top: auto;
+  margin-bottom: auto;
+}

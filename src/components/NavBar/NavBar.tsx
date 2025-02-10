@@ -5,10 +5,13 @@ import PersonIcon from '@mui/icons-material/Person';
 import User from '../../models/User';
 import { useEffect, useState } from 'react';
 import UsersService from '../../services/UserService';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar  = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
+
   const fetchData = async () => {
       try {
           const response = await new UsersService().userInfo(localStorage.getItem('idUser')!)
@@ -40,9 +43,9 @@ const NavBar  = () => {
 
     {isOpen && user && <div className='navbar-user-menu lg:col-start-12 '>
         <div className='navbar-user-menu-items'>
-          <p>Perfil</p>
+          <button onClick={() => navigate('/profile')}><p>Perfil</p></button>
         </div>
-        { (user.role === 'admin') ? <div className='navbar-user-menu-items'><p>Adminstrador</p></div> : <></>}
+        { (user.role === 'admin') ? <div className='navbar-user-menu-items'><button onClick={() => navigate('/admin')}><p>Adminstrador</p></button></div> : <></>}
         <div className='navbar-user-menu-items'>
           <button onClick={() => {
             localStorage.removeItem('userToken')

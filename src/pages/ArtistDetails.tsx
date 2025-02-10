@@ -6,6 +6,8 @@ import AlbumList from "../components/AlbumList/AlbumList";
 import NavBar from "../components/NavBar/NavBar";
 import './ArtistDetails.css'
 import MessageLogin from "../components/MessageLogin/MessageLogin";
+import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
+import { SongProvider } from "../context/SongContext";
 
 const ArtistDetail = () => {
 
@@ -49,6 +51,9 @@ const ArtistDetail = () => {
         <AlbumList artistId={artist._id}/>
       }      
     </div>
+    <SongProvider>
+      <MusicPlayer/>
+    </SongProvider>
   </div>; 
 }
 

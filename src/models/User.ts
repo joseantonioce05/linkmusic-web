@@ -7,4 +7,5 @@ export default interface User {
     password: string;
     createdAt: string;
     updatedAt: string;
+    image: string
 }
