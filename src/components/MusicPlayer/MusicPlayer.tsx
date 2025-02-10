@@ -28,8 +28,8 @@ const MusicPlayer = () => {
         fetchData();
       }, []);
 
-
-  return <div className='music-player-container fixed bottom-0 left-0 w-full p-3' >
+//fixed bottom-0 left-0 w-full p-3
+  return <div className='music-player-container ' >
     <div className='grid grid-cols-3'>
       <div className='song-info flex items-center'>
         { album && 

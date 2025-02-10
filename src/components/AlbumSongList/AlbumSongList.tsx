@@ -38,7 +38,7 @@ const AlbumSongList = ({ albumId }: Props) => {
       fetchData();
     }, []);
 
-  return <div className="album-detail-container">
+  return <div className="album-detail-container overflow-auto">
     {album && 
     <div key={album._id} className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 max-sm:grid-cols-2">
     <div className="album-image">
