@@ -1,5 +1,6 @@
 .song-list-container {
   margin-left: 2rem;
+  
 }
 
 .song-list-container h2 {
@@ -10,11 +11,16 @@
 
 .song-list {
 
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .song-list .song-container {
   margin-right: 2rem;
+}
+
+.song-container {
+  padding-bottom: 0.5rem;
 }
 
 .song-list .song-container p {

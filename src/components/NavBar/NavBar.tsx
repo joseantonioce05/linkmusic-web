@@ -1,6 +1,6 @@
 import './NavBar.css'
 import HouseIcon from '@mui/icons-material/House';
-import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+// import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import PersonIcon from '@mui/icons-material/Person';
 import User from '../../models/User';
 import { useEffect, useState } from 'react';
@@ -25,17 +25,17 @@ const NavBar  = () => {
       fetchData();
   }, [])
   
-  return <div className="navbar-container grid max-lg:grid-cols-3 lg:grid-cols-8 xl:grid-cols-12">
+  return <div className="navbar-container grid max-lg:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
     <div className='navbar-home'>
       <Link to={"/"}>
       <HouseIcon/> Inicio
       </Link>
       {/* <a href="/"><HouseIcon/> Inicio</a> */}
     </div>
-    <div className='navbar-libray max-lg:justify-self-center max-lg:col-span-1 max-md:justify-self-center lg:col-span-2 xl:col-span-2 invisible'>
+    {/* <div className='navbar-libray max-lg:justify-self-center max-lg:col-span-1 max-md:justify-self-center lg:col-span-2 xl:col-span-2 invisible'>
       <LibraryMusicIcon/> Bioblioteca
-    </div>
-    <div className='navbar-title max-lg:invisible max-lg:row-start-2 lg:visible lg:col-start-5 lg:col-span-2 xl:col-start-6 2xl:col-start-6 2xl:col-span-1'>
+    </div> */}
+    <div className='navbar-title  sm:visible '>
       <p>Link Music</p>
     </div>
     <button onClick={() => setIsOpen((prev) => !prev)} className='navbar-user flex lg:col-start-12'>

@@ -12,7 +12,7 @@ const Home = () => {
   return <div className="container-home">
     { (localStorage.getItem("userToken") === null ? <MessageLogin/> : <></>) }
     
-    <div className="home-container">
+    <div className="home-container overflow-auto">
       <ArtistsList />
       <LatestAlbumList />
     </div>

@@ -6,6 +6,7 @@ import AlbumService from "../../services/AlbumService";
 import './AlbumSongList.css'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { useSong } from "../../context/SongContext";
+import { Link } from "react-router-dom";
 
 type Props = {
   albumId: string;
@@ -16,6 +17,7 @@ const AlbumSongList = ({ albumId }: Props) => {
   const [songs, setSongs] = useState<Song[]>([]);
   const [album, setAlbum] = useState<Album| null>(null);
   const [artist, setArtist] = useState(null);
+  const [artistId, setArtistId] = useState(null)
 
   const { setSongName } = useSong();
 
@@ -28,6 +30,7 @@ const AlbumSongList = ({ albumId }: Props) => {
         setAlbum(responseAlbum.data.albumSearched);
 
         setArtist(responseAlbum.data.albumSearched.artist.name)
+        setArtistId(responseAlbum.data.albumSearched.artist._id)
 
       } catch (error) {
         console.log(error);
@@ -78,7 +81,9 @@ const AlbumSongList = ({ albumId }: Props) => {
           <p> {song.duration}</p>
         </div>
         <div className="song-artist">
-          <p>{ artist }</p>
+          <Link to={`/artist/${artistId}`}>
+            <p>{ artist }</p>
+          </Link>
         </div>
         <div className="song-play">
           <button onClick={() => 
