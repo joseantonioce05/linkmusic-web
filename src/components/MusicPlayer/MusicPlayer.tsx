@@ -31,7 +31,7 @@ const MusicPlayer = () => {
 //fixed bottom-0 left-0 w-full p-3
   return <div className='music-player-container ' >
     <div className='grid grid-cols-3'>
-      <div className='song-info flex items-center'>
+      <div className='song-info flex items-center max-md:collapse max-md:hidden'>
         { album && 
           <img src={import.meta.env.VITE_API_URL + "album/image/" + album.image} alt="" />
         }
@@ -41,7 +41,7 @@ const MusicPlayer = () => {
         </div>
         
       </div>
-      <div>
+      <div className='max-md:m-auto max-md:col-start-2'>
         <AudioPlayer
         src={import.meta.env.VITE_API_URL + "song/audio/" + localStorage.getItem('song')}
         color="#EFD6AC"

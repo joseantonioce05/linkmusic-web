@@ -81,7 +81,12 @@ const AlbumSongList = ({ albumId }: Props) => {
           <p>{ artist }</p>
         </div>
         <div className="song-play">
-          <button onClick={() => {setSongName(song.file); localStorage.setItem('albumId', album!._id); localStorage.setItem('songName', song.name)}}><PlayArrowIcon /></button>
+          <button onClick={() => 
+            {
+            setSongName(song.file) 
+            localStorage.setItem('albumId', album!._id) 
+            localStorage.setItem('songName', song.name)
+            }}><PlayArrowIcon /></button>
         </div>
       </div>
     ))}
