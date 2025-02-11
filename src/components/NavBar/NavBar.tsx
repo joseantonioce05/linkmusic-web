@@ -45,9 +45,9 @@ const NavBar  = () => {
     </button>
 
     {isOpen && user && <div className='navbar-user-menu lg:col-start-12 '>
-        <div className='navbar-user-menu-items'>
+        {/* <div className='navbar-user-menu-items'>
           <button onClick={() => navigate('/profile')}><p>Perfil</p></button>
-        </div>
+        </div> */}
         { (user.role === 'admin') ? <div className='navbar-user-menu-items'><button onClick={() => navigate('/admin')}><p>Adminstrador</p></button></div> : <></>}
         <div className='navbar-user-menu-items'>
           <button onClick={() => {

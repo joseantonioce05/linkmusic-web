@@ -31,7 +31,8 @@
 .description {
   color: #EFD6AC;
   font-weight: bold;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .numeral  {
@@ -48,6 +49,7 @@
 
 .song {
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .song p {
@@ -60,6 +62,10 @@
 }
 
 .song-duration {
+  text-align: center;
+}
+
+.song-artist {
   text-align: center;
 }
 

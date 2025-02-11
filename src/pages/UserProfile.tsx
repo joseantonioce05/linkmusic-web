@@ -1,16 +1,9 @@
-import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
-import NavBar from "../components/NavBar/NavBar";
 import UserInfo from "../components/UserInfo/UserInfo";
-import { SongProvider } from "../context/SongContext";
 
 
 const UserProfile = () => {
-  return <div>
-    <SongProvider>
-      <NavBar />
+  return <div className="user-profile-container overflow-auto">
       <UserInfo />
-      <MusicPlayer />
-    </SongProvider>
   </div>
 }
 

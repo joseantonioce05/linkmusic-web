@@ -77,7 +77,7 @@ const AlbumSongList = ({ albumId }: Props) => {
         <div className="song-duration">
           <p> {song.duration}</p>
         </div>
-        <div>
+        <div className="song-artist">
           <p>{ artist }</p>
         </div>
         <div className="song-play">
