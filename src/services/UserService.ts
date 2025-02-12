@@ -30,4 +30,18 @@ export default class UsersService {
       },
     });
   }
+
+  userAddFavorite(idUser: String, songId: String) {
+    const favorite = {
+      userId: idUser,
+      songId: songId
+    }
+
+    return axios.post(`${this.baseUrl}/favorite/`, favorite, {
+      headers: {
+        Authorization: localStorage.getItem("userToken"),
+        "ngrok-skip-browser-warning": "69420",
+      },
+    });
+  }
 }

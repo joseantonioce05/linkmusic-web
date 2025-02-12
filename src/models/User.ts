@@ -1,3 +1,5 @@
+import Song from "./Song";
+
 export default interface User {
     id: number;
     name: string;
@@ -8,4 +10,5 @@ export default interface User {
     createdAt: string;
     updatedAt: string;
     image: string
+    song_favorite: Song[]
 }

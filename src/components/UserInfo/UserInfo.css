@@ -5,9 +5,19 @@
   padding-left: 1rem;
   padding-top: 2rem;
   justify-content: center;
+  height: 87vh;
 }
 
 .user-username {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.favorite-song {
+  padding-bottom: 1rem;
+}
+
+.user-avatar {
+  width: 12rem;
+  height: 12rem;
 }

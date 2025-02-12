@@ -30,7 +30,6 @@ const NavBar  = () => {
       <Link to={"/"}>
       <HouseIcon/> Inicio
       </Link>
-      {/* <a href="/"><HouseIcon/> Inicio</a> */}
     </div>
     {/* <div className='navbar-libray max-lg:justify-self-center max-lg:col-span-1 max-md:justify-self-center lg:col-span-2 xl:col-span-2 invisible'>
       <LibraryMusicIcon/> Bioblioteca
@@ -45,10 +44,10 @@ const NavBar  = () => {
     </button>
 
     {isOpen && user && <div className='navbar-user-menu lg:col-start-12 '>
-        {/* <div className='navbar-user-menu-items'>
+        <div className='navbar-user-menu-items'>
           <button onClick={() => navigate('/profile')}><p>Perfil</p></button>
-        </div> */}
-        { (user.role === 'admin') ? <div className='navbar-user-menu-items'><button onClick={() => navigate('/admin')}><p>Adminstrador</p></button></div> : <></>}
+        </div>
+        {/* { (user.role === 'admin') ? <div className='navbar-user-menu-items'><button onClick={() => navigate('/admin')}><p>Adminstrador</p></button></div> : <></>} */}
         <div className='navbar-user-menu-items'>
           <button onClick={() => {
             localStorage.removeItem('userToken')

@@ -5,8 +5,11 @@ import Album from "../../models/Album";
 import AlbumService from "../../services/AlbumService";
 import './AlbumSongList.css'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useSong } from "../../context/SongContext";
 import { Link } from "react-router-dom";
+import User from "../../models/User";
+import UsersService from "../../services/UserService";
 
 type Props = {
   albumId: string;
@@ -18,6 +21,8 @@ const AlbumSongList = ({ albumId }: Props) => {
   const [album, setAlbum] = useState<Album| null>(null);
   const [artist, setArtist] = useState(null);
   const [artistId, setArtistId] = useState(null)
+  const [user, setUser] = useState<User | null>(null);
+  
 
   const { setSongName } = useSong();
 
@@ -28,6 +33,9 @@ const AlbumSongList = ({ albumId }: Props) => {
 
         const responseAlbum = await new AlbumService().getAlbum(albumId)
         setAlbum(responseAlbum.data.albumSearched);
+
+        const response = await new UsersService().userInfo(localStorage.getItem('idUser')!)
+        setUser(response.data.user)
 
         setArtist(responseAlbum.data.albumSearched.artist.name)
         setArtistId(responseAlbum.data.albumSearched.artist._id)
@@ -86,12 +94,23 @@ const AlbumSongList = ({ albumId }: Props) => {
           </Link>
         </div>
         <div className="song-play">
-          <button onClick={() => 
+          <button className="song-button-play" onClick={() => 
             {
             setSongName(song.file) 
             localStorage.setItem('albumId', album!._id) 
             localStorage.setItem('songName', song.name)
             }}><PlayArrowIcon /></button>
+            <button onClick={ async () =>  
+            {
+              const songId = song._id
+              if(user?.song_favorite.some(song_favorite => song_favorite._id === songId)) {
+                alert("Ya esta en tus favoritos")
+                console.log("Si esta la cancion")
+              } else {
+                const response = await new UsersService().userAddFavorite(localStorage.getItem('idUser')!, songId)
+                console.log(response)
+              }
+            }}><FavoriteIcon/></button>
         </div>
       </div>
     ))}

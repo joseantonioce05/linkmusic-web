@@ -72,3 +72,7 @@
 .song-play {
   color: #EFD6AC;
 }
+
+.song-button-play {
+  padding-right: 1rem;
+}

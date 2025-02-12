@@ -1,7 +1,9 @@
+import Album from "./Album";
+
 export default interface Song {
     _id: string;
     name: string;
-    album: string;
+    album: Album;
     track: number;
     duration: number;
     realeseDate: string;
